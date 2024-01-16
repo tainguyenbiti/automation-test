@@ -1,0 +1,50 @@
+<suite name="CRMSuite" verbose="1" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+    <test name="GetProductByUPC">
+        <parameter name="productUPC" value="SHSHHS2356789"/>
+        <parameter name="containerNo" value="111000"/>
+        <classes>
+            <class name="com.acblogictics.databaseabclogictics.product.GetProductByUPC"/>
+        </classes>
+    </test>
+    <test name="GetAllInboundreceivingProductDetail">
+        <parameter name="containerNo" value="111000"/>
+        <classes>
+            <class name="com.acblogictics.databaseabclogictics.testcase.scanner.GetAllInboundreceivingProductDetail"/>
+        </classes>
+    </test>
+    <test name="GetListReceiving">
+        <classes>
+            <class name="com.acblogictics.databaseabclogictics.receiving.GetListReceiving"/>
+        </classes>
+    </test>
+    <test name="GetInboundReceivingById">
+        <parameter name="containerNo" value="111000"/>
+        <classes>
+            <class name="com.acblogictics.databaseabclogictics.receiving.GetInboundReceivingById"/>
+        </classes>
+    </test>
+    <test name="GetAllInboundShipmentIsNotNull">
+        <classes>
+            <class name="com.acblogictics.databaseabclogictics.scanner.GetAllInboundShipmentIsNotNull"/>
+        </classes>
+    </test>
+    <test name="GetAllProductByContainerNo">
+        <classes>
+            <class name="com.acblogictics.databaseabclogictics.scanner.GetAllProductByContainerNo"/>
+        </classes>
+    </test>
+    <test name="GetAllScanProductReceivingDetailByContainerNo">
+        <classes>
+            <class name="com.acblogictics.databaseabclogictics.scanner.GetAllScanProductReceivingDetailByContainerNo"/>
+        </classes>
+    </test>
+    <test name="GetInboundReceivingByContainerNo">
+        <classes>
+            <class name="com.acblogictics.databaseabclogictics.scanner.GetInboundReceivingByContainerNo"/>
+        </classes>
+    </test>
+</suite>
